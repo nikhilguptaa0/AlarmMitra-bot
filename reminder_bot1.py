@@ -15,9 +15,9 @@ from telegram.ext import (
 )
 
 # ==== CONFIG ====
-BOT_TOKEN = "8361632511:AAFFc7rpWDLmRRzuxRCXuGWbiFIDYnYfmMk"
-OPENAI_API_KEY = "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"
-openai.api_key = OPENAI_API_KEY
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 DB_NAME = "ai_reminders.db"
 
 # ==== LOGGING ====
